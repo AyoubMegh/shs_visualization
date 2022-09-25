@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid" style="background-color: #e7ecf0;">
+    <label for="QueryExample" class="form-label"><b>Exemple de requête</b></label>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example"  onChange = "setQuery(this);">
+        <option disabled selected value> -- Veuillez choisir une requête prédéfinie -- </option>
+        <option value="0">Requete personnalisée</option>
+        <option value="1">Details correspondance de l'entite Guillaume Apollinaire avec Pablo Picasso</option>
+        <option value="2">Details de l'entité Guillaume Apollinaire</option>
+        <option value="3">Les noms des entitées qui on plus de 100 correspondances avec Pablo Picasso</option>
+        <option value="4">Tout les oeuvres de l'entité Jean COCTEAU</option>
+    </select>
+    <hr>
+    <form  action="/" method="POST" id="myForm" style="margin-bottom: 50px;">
+        <label for="QueryArea" class="form-label mt-2"><b>Requête</b></label>
+        <p><textarea id='lineCounter' wrap='off' readonly>1.</textarea><textarea id='codeEditor' wrap='off' placeholder="Écrivez votre requête ici" name="query_data" id="QueryTextarea" rows="5" required>{{org_query | safe}}</textarea></p>
+        <button class="btn btn-success btn-md float-end mt-0 mb-12"type="submit">Submit</button>
+    </form>
+    <hr style="margin-top: 4rem;">
+    <label for="ResultArea" class="form-label mt-3"><b>Response</b></label>
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
+    {% if warning %}
+        <div class="alert alert-warning" role="alert">
+            {{ warning }}
+        </div>
+    {% endif %}
+    {{ csv_file|safe }}
+    {% if isDownlodable%}
+        <div>
+            <a class="btn btn-success btn-md float-end mt-2 mb-10" id="btn" href="{{ url_for('download') }}" >Télécharger</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

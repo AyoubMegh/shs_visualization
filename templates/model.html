@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid" style="background-color: hsl(207, 23%, 92%);">
+    <center>
+        <div class="container" style="border:1px solid black;margin: 5px;padding: 5px;">
+            <img src="{{ schema }}" class="img-fluid" >
+        </div>
+        <hr>
+        <table>
+            <tr>
+                <th>Prédicat</th>
+                <th>URI</th>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <td>http://xmlns.com/foaf/0.1/name</td>
+            </tr>
+            <tr>
+                <td>Participe</td>
+                <td>http://www.shs.fr/univ-poitiers/participe</td>
+            </tr>
+            <tr>
+                <td>Coordonnées d'envoie</td>
+                <td>http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</td>
+            </tr>
+            <tr>
+                <td>Oeuvre</td>
+                <td>http://www.shs.fr/univ-poitiers/auteurOeuvre</td>
+            </tr>
+            <tr>
+                <td>Lien Artiste</td>
+                <td>http://www.shs.fr/univ-poitiers/lienEntite</td>
+            </tr>
+            <tr>
+                <td>Lien information</td>
+                <td>http://www.w3.org/2002/07/owl#sameAs</td>
+            </tr>
+            <tr>
+                <td>Latitude envoie</td>
+                <td>http://www.w3.org/2003/01/geo/wgs84_pos#lat</td>
+            </tr>
+            <tr>
+                <td>Longitude envoie</td>
+                <td>http://www.w3.org/2003/01/geo/wgs84_pos#long</td>
+            </tr>
+            <tr>
+                <td>GeoPoint envoie</td>
+                <td>http://www.opengis.net/ont/geosparql#asWKT</td>
+            </tr>
+            <tr>
+                <td>Année début</td>
+                <td>http://www.shs.fr/univ-poitiers/debut</td>
+            </tr>
+            <tr>
+                <td>Année fin</td>
+                <td>http://www.shs.fr/univ-poitiers/fin</td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td>http://www.shs.fr/univ-poitiers/nombre</td>
+            </tr>
+            <tr>
+                <td>Contient</td>
+                <td>http://www.shs.fr/univ-poitiers/contient</td>
+            </tr>
+            <tr>
+                <td>Possède</td>
+                <td>http://www.shs.fr/univ-poitiers/possede</td>
+            </tr>
+            <tr>
+                <td>Domaine</td>
+                <td>http://data.bnf.fr/ontology/bnf-onto/domaine</td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td>http://rdvocab.info/ElementsGr2/addressOfTheCorporateBody</td>
+            </tr>
+            <tr>
+                <td>Pays</td>
+                <td>http://rdvocab.info/ElementsGr2/placeAssociatedWithTheCorporateBody</td>
+            </tr>
+            <tr>
+                <td>Activité Commercial</td>
+                <td>http://rdvocab.info/ElementsGr2/fieldOfActivityOfTheCorporateBody</td>
+            </tr>
+            <tr>
+                <td>Année Début Activité</td>
+                <td>http://rdvocab.info/ElementsGr2/dateOfEstablishment</td>
+            </tr>
+            <tr>
+                <td>Année Fin Activité</td>
+                <td>http://rdvocab.info/ElementsGr2/dateOfTermination</td>
+            </tr>
+            <tr>
+                <td>Date Naissance</td>
+                <td>http://rdvocab.info/ElementsGr2/dateOfBirth</td>
+            </tr>
+            <tr>
+                <td>Ville Naissance</td>
+                <td>http://rdvocab.info/ElementsGr2/placeOfBirth</td>
+            </tr>
+            <tr>
+                <td>Pays Naissance</td>
+                <td>http://www.w3.org/ns/person#countryOfBirth</td>
+            </tr>
+            <tr>
+                <td>Date Décès</td>
+                <td>http://rdvocab.info/ElementsGr2/dateOfDeath</td>
+            </tr>
+            <tr>
+                <td>Ville Décès</td>
+                <td>http://rdvocab.info/ElementsGr2/placeOfDeath</td>
+            </tr>
+            <tr>
+                <td>Pays Décès</td>
+                <td>http://www.w3.org/ns/person#countryOfDeath</td>
+            </tr>
+            <tr>
+                <td>Nationalité</td>
+                <td>http://www.w3.org/ns/person#citizenship</td>
+            </tr>
+            <tr>
+                <td>Genre</td>
+                <td>http://xmlns.com/foaf/0.1/gender</td>
+            </tr>
+            <tr>
+                <td>Mot Clé</td>
+                <td>http://rdvocab.info/ElementsGr2/fieldOfActivityOfThePerson</td>
+            </tr>
+            <tr>
+                <td>Fonction</td>
+                <td>http://rdvocab.info/ElementsGr2/biographicalInformation</td>
+            </tr>
+            <tr>
+                <td>Expéditeur</td>
+                <td>http://www.shs.fr/univ-poitiers/exp</td>
+            </tr>
+            <tr>
+                <td>Destinataire</td>
+                <td>http://www.shs.fr/univ-poitiers/dest</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>http://www.shs.fr/univ-poitiers/type</td>
+            </tr>
+            <tr>
+                <td>Jour</td>
+                <td>http://www.w3.org/2006/time#days</td>
+            </tr>
+            <tr>
+                <td>Mois</td>
+                <td>http://www.w3.org/2006/time#months</td>
+            </tr>
+            <tr>
+                <td>Année</td>
+                <td>http://www.w3.org/2006/time#years</td>
+            </tr>
+            <tr>
+                <td>Rue Expédition</td>
+                <td>http://www.shs.fr/univ-poitiers/rueExp</td>
+            </tr>
+            <tr>
+                <td>Ville Expédition</td>
+                <td>http://www.shs.fr/univ-poitiers/villeExp</td>
+            </tr>
+            <tr>
+                <td>Pays Expédition</td>
+                <td>http://www.shs.fr/univ-poitiers/paysExp</td>
+            </tr>
+            <tr>
+                <td>Rue Réception</td>
+                <td>http://www.shs.fr/univ-poitiers/rueRec</td>
+            </tr>
+            <tr>
+                <td>Ville Réception</td>
+                <td>http://www.shs.fr/univ-poitiers/villeRec</td>
+            </tr>
+            <tr>
+                <td>Pays Réception</td>
+                <td>http://www.shs.fr/univ-poitiers/paysRec</td>
+            </tr>
+            <tr>
+                <td>Objet</td>
+                <td>http://www.shs.fr/univ-poitiers/objet</td>
+            </tr>
+            <tr>
+                <td>Résume</td>
+                <td>http://www.shs.fr/univ-poitiers/resume</td>
+            </tr>
+            <tr>
+                <td>Pièce jointe</td>
+                <td>http://www.shs.fr/univ-poitiers/pieceJointe</td>
+            </tr>
+            <tr>
+                <td>Langue</td>
+                <td>http://www.shs.fr/univ-poitiers/langue</td>
+            </tr>
+            <tr>
+                <td>Personne Cité</td>
+                <td>http://www.shs.fr/univ-poitiers/personneCite</td>
+            </tr>
+        </table>
+    </center>
+</div>
+{% endblock %}

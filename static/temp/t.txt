@@ -1,0 +1,15 @@
+SELECT ?e ?d ?f ?n ?lat ?long ?point WHERE
+{
+?p <http://xmlns.com/foaf/0.1/name> "PICASSO Pablo" .
+?e <http://xmlns.com/foaf/0.1/name> "APOLLINAIRE Guillaume" .
+?p <http://www.shs.fr/univ-poitiers/participe> ?c .
+?e <http://www.shs.fr/univ-poitiers/participe> ?c .
+?c <http://www.shs.fr/univ-poitiers/debut> ?d .
+?c <http://www.shs.fr/univ-poitiers/fin> ?f .
+?c <http://www.shs.fr/univ-poitiers/nombre> ?n .
+?e <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ?ae.
+?ae <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat .
+?ae <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long .
+?ae <http://www.opengis.net/ont/geosparql#asWKT> ?point .
+
+}

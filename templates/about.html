@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row m-2">
+        <div class="col-9 border border-dark rounded-right">
+            <center><h3><u>À propos</u></h3> </center>
+                <div style="padding-top: 10rem;">
+                    <p><h5>Cette application web permet la visualisation des données RDF collecter par notre outils ETL conçu pour les sciences humaines et sociales .</h5></p>
+                    <p><h5>Ces deux outils entrent dans le cadre de réalisation de notre projet de fin d'études pour obtention de master en informatique option génie logiciel.</h5></p>
+                    <p>
+                        <h5><u>Réalisation : </u></h5>
+                        <ul>
+                            <li><b>MEGHEBBAR Ayoub</b></li>
+                            <li><b>BEKKAL BRIKCI Younes</b></li>
+                        </ul>
+                    </p>
+                </div>
+           
+        </div>
+        <div class="col-3">
+            <div class="col border-bottom border-dark"><img src="{{ tlemcen }}" class="img-fluid rounded" ></div>
+            <div class="col border-bottom border-dark"><img src="{{ ensma }}" class="img-fluid rounded" ></div>
+            <div class="col border-bottom border-dark"><img src="{{ lias }}" class="img-fluid rounded" ></div>
+            <div class="col-9"><img src="{{ poitiers }}" class="img-fluid rounded" ></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
